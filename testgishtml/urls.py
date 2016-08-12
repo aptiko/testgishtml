@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from gishtml.views import CreatePolygonView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^', CreatePolygonView.as_view()),
 ]
